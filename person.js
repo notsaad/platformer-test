@@ -11,7 +11,7 @@ function Person() {
     this.pos.add(this.vel);
     this.acc.set(0, 0);
   }
-
+  
   this.display = function() {
     fill(255);
     stroke(255);
@@ -19,11 +19,11 @@ function Person() {
   }
 
   this.movement = function() {
-   	if (keyPressed && (key === 'ArrowLeft')) {
-  		this.vel.x = -200;
+   	if (keyIsDown && (key === 'ArrowLeft')) {
+  		this.vel.x = -400;
    }
-    if (keyPressed && (key === 'ArrowRight')) {
-    this.vel.x = 200;
+    if (keyIsDown && (key === 'ArrowRight')) {
+    this.vel.x = 400;
 }
 	else {
     this.vel.x = 0;
@@ -37,20 +37,24 @@ function Person() {
          if(this.pos.y >= height){
      
       		jumping = false;
+          this.vel.x = 0;
       
     	}
       
-      if (this.pos.x > width + 10) {
+      if (this.pos.x > width + 20) {
        
-        this.pos.x = -10;
+        this.pos.x = width - 20;
         
       }
       
-      if (this.pos.x < -10) {
+      if (this.pos.x < -20) {
        
-        this.pos.x = width + 10;
+        this.pos.x = -20;
         
       }
+      
+      constrain(this.pos.x, 0 - 10, width + 10);
+      
     }
 }
 }
