@@ -7,17 +7,17 @@ function setup() {
 }
   
   function keyPressed() {
-    if (key == 'ArrowUp' && jumping == false ){
+    if (keyPressed && key == 'ArrowUp' && jumping == false ){
     var jump = createVector(0, -5);
     person.applyForce(jump);
     jumping = true;   
   }
- if (key == 'ArrowLeft'){
-    person.vel.x = -2;
+ if (keyPressed && key == 'ArrowLeft' && person.pos.y < height ){
+    person.vel.x = -3;
  }
   
-    if (key == 'ArrowRight'){
-    person.vel.x = 2;
+    if (keyPressed && key == 'ArrowRight' && person.pos.y < height){
+    person.vel.x = 3;
   
     }
     
