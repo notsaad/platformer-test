@@ -13,7 +13,7 @@ function Person() {
   }
   
   this.display = function() {
-    fill(255);
+    fill(11, 57, 84);
     stroke(255);
     rect(this.pos.x, this.pos.y - 50, 20, 50);
   }
