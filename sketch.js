@@ -23,7 +23,19 @@ function setup() {
     
 }
 
+function keyReleased() {
+	if (keyReleased && key == 'ArrowLeft' && person.pos.y < height ){
+    person.vel.x = 0;
+ }
+  
+    if (keyReleased && key == 'ArrowRight' && person.pos.y < height){
+    person.vel.x = 0;
+  
+    }
+}
+
 function draw() {
+	
   background(51);
 
   var gravity = createVector(0, 0.1);
