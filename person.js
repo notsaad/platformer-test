@@ -1,5 +1,5 @@
 function Person() {
-  this.pos = createVector(50, height);
+  this.pos = createVector(width/2, height);
   this.vel = createVector(0*0.95, 0);
   this.acc = createVector(0, 0);
   this.applyForce = function(force) {
@@ -13,7 +13,7 @@ function Person() {
   }
   
   this.display = function() {
-    fill(11, 57, 84);
+    fill(255);
     stroke(255);
     rect(this.pos.x, this.pos.y - 50, 20, 50);
   }
