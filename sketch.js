@@ -8,16 +8,16 @@ function setup() {
   
   function keyPressed() {
     if (keyPressed && key == 'ArrowUp' && jumping == false ){
-    var jump = createVector(0, -5);
+    var jump = createVector(0, -10);
     person.applyForce(jump);
     jumping = true;   
   }
  if (keyPressed && key == 'ArrowLeft' && person.pos.y < height ){
-    person.vel.x = -3;
+    person.vel.x = -6;
  }
   
     if (keyPressed && key == 'ArrowRight' && person.pos.y < height){
-    person.vel.x = 3;
+    person.vel.x = 6;
   
     }
     
