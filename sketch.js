@@ -8,7 +8,7 @@ function setup() {
   
   function keyPressed() {
     if (keyPressed && key == 'ArrowUp' && jumping == false ){
-    var jump = createVector(0, -10);
+    var jump = createVector(0, -20);
     person.applyForce(jump);
     jumping = true;   
   }
